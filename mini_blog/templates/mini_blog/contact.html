@@ -1,0 +1,31 @@
+{% extends 'mini_blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-sm-10">
+    <h1 class="text-white my-5">Contact us</h1>
+    <div class="h-90 p-5 text-white bg-dark rounded-3">
+        <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Your name">
+            </div>
+            <div class="col-md-6">
+                <label for="inputemail" class="form-label">Email</label>
+                <input type="Email" class="form-control" id="inputemail" placeholder="xyz@abc.com">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Type your Address here">
+            </div>
+            <div class="col-md-12">
+              <label for="inputmessage" class="form-label">Message</label>
+              <textarea class="form-control" id="inputmessage" rows="3" placeholder="Please share your concern with us here"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-outline-light">Submit</button>
+            </div>
+          </form>
+    </div>
+</div>
+{% endblock content %}
