@@ -74,10 +74,25 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'nightOWL',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://prajwal_21:oh8ZyEeVn27deM3W@cluster0.h6zmq.mongodb.net/?retryWrites=true&w=majority',
+            'username': 'prajwal_21',
+            'password': 'oh8ZyEeVn27deM3W',
+            'name': 'nightOWL',
+            'authMechanism': 'SCRAM-SHA-1'
+        }  
     }
 }
 
